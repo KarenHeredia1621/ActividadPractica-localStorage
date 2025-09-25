@@ -32,6 +32,11 @@ formCurso.addEventListener("submit", (e)=>{
     }
 
     localStorage.setItem("curso", JSON.stringify(nuevoCurso))
+        const cursoCreado = localStorage.getItem("curso");
+
+        const objetoCurso = JSON.parse(cursoCreado)
+        inputMensaje.innerHTML = "El curso es: " +  objetoCurso.nombre + "<br>" + "profesor: " + objetoCurso.profesor + "<br>" + "precio: " + objetoCurso.precio + "<br>" + "ciudad: " + objetoCurso.ciudad + "<br>" +  "cupo: " + objetoCurso.cupo; 
+
 
     formCurso.reset()
 });
