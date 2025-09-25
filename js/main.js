@@ -47,6 +47,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 });
 
+btnBorrar.addEventListener("click", ()=>{
+    localStorage.removeItem("curso");
+    inputMensaje.textContent = "Curso eliminado correctamente";
+
+});
+
 
 
 
