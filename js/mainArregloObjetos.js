@@ -41,7 +41,7 @@ formCurso.addEventListener("submit", (e)=>{
         const cursoCreado = localStorage.getItem("curso");
 
         const objetoCurso = JSON.parse(cursoCreado)
-        inputMensaje.innerHTML = "El curso es: " +  objetoCurso.nombre + "<br>" + "profesor: " + objetoCurso.profesor + "<br>" + "precio: " + objetoCurso.precio + "<br>" + "ciudad: " + objetoCurso.ciudad + "<br>" +  "cupo: " + objetoCurso.cupo; 
+        inputMensaje.innerHTML = "El curso es: " + curso.nombre + "<br>" + "profesor: " + curso.profesor + "<br>" + "precio: " + curso.precio + "<br>" + "ciudad: " + curso.ciudad + "<br>" +  "cupo: " + curso.cupo; 
 
 
     formCurso.reset();
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 btnBorrar.addEventListener("click", ()=>{
     localStorage.removeItem("cursos");
-    inputMensaje.textContent = "Cursos eliminado correctamente";
+    inputMensaje.textContent = "Cursos eliminados correctamente";
 
 });
 
